@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>Hello World App</title>
+	<script src="https://openui5.hana.ondemand.com/1.38.4/resources/sap-ui-core.js"
+		id="sap-ui-bootstrap"
+		data-sap-ui-theme="sap_bluecrystal"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-resourceroots='{
+            "sap.ui.demo.wt": "./"
+         }'>
+	</script>
+	<script type="text/javascript">
+		sap.ui.getCore().attachInit(function () {
+			// create a mobile app and display page1 initially
+			var app = new sap.m.App("myApp", {
+				initialPage: "page1"
+			});
+			
+			// create the first page
+			var page1 = new sap.m.Page("page1", {
+				title : "Hello World",
+				showNavButton : false,
+				content : new sap.m.Button({
+					text : "Go to Page 2",
+					press : function () {
+						// navigate to page2
+						//app.to("page2");
+						 alert("Hello World");
+					}
+				})
+			});
+			app.addPage(page1);
+			app.placeAt("content");
+			
+			sap.ui.xmlview({
+	          viewName : "sap.ui.demo.wt.view.app"
+	         }).placeAt("content");
+		});
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+</body>
+</html>
