@@ -1,16 +1,7 @@
 <mvc:View
    controllerName="sap.ui.demo.wt.controller.app"
    xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <Text text="Hi"/>
-   <Input
-      value="{/recipient}"
-      description="Hello {/recipient}"
-      valueLiveUpdate="true"
-      width="60%"/>
-   <Button
-      text="Say Hello"
-      press="onShowHello"/>
-   <Button
-      text="{/recipient}"/>
+   xmlns:mvc="sap.ui.core.mvc"
+   displayBlock="true">
+   <App class="nyAppDemoWT" id="app"/>
 </mvc:View>
